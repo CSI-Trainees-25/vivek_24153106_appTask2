@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:coffeeshop/elements/mybutton.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -30,6 +31,8 @@ class IntroPage extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 20),
+          MyButton('Dive In'),
         ],
       ),
     );
