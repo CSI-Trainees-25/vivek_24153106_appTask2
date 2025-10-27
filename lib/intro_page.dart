@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:coffeeshop/elements/mybutton.dart';
+import 'package:coffeeshop/home_page.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -11,7 +12,8 @@ class IntroPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset('assets/introImage.png'),
+          SizedBox(height: 80),
+          Image.asset('assets/introImage.png', height: 423, width: 375),
           Text(
             'Stay Focused',
             style: TextStyle(
@@ -31,8 +33,16 @@ class IntroPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20),
-          MyButton('Dive In'),
+          SizedBox(height: 100),
+          MyButton(
+            'Dive In',
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+            },
+          ),
         ],
       ),
     );
