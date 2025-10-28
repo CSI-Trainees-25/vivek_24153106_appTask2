@@ -1,5 +1,7 @@
+import 'package:coffeeshop/menu_item.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:coffeeshop/item_tile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,6 +13,20 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List<MenuItem> menu = [
+    MenuItem(
+      name: 'Espresso',
+      price: '10',
+      imagePath: 'assets/espresso.png',
+      rating: '4.2',
+    ),
+    MenuItem(
+      name: 'Latte',
+      price: '20',
+      imagePath: 'assets/latte.png',
+      rating: '5',
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,6 +74,16 @@ class _HomePageState extends State<HomePage> {
             padding: EdgeInsetsGeometry.symmetric(horizontal: 20),
             child: Text('coffee menu'),
           ),
+          SizedBox(height: 10),
+          Expanded(
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: menu.length,
+              itemBuilder: (context, index) => ItemTile(menu[index]),
+            ),
+          ),
+          SizedBox(height: 10),
+          Text('Special for you', style: GoogleFonts.inter(fontSize: 20)),
         ],
       ),
     );
