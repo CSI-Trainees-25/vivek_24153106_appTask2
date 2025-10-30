@@ -11,8 +11,9 @@ class IntroPage extends StatelessWidget {
       backgroundColor: Color.fromRGBO(236, 224, 209, 1),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 80),
+          SizedBox(height: 20),
           Image.asset('assets/introImage.png', height: 423, width: 375),
           Text(
             'Stay Focused',
