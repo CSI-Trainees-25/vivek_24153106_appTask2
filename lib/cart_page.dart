@@ -67,7 +67,7 @@ class _CartPageState extends State<CartPage> {
                           Text(
                             'US ${item.unitPrice.toStringAsFixed(2)}',
                             style: GoogleFonts.inter(
-                              fontWeight: FontWeight.w700,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                           IconButton(
@@ -107,7 +107,7 @@ class _CartPageState extends State<CartPage> {
                 'Total',
                 style: GoogleFonts.inter(
                   fontSize: 16,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               Spacer(),
@@ -115,7 +115,7 @@ class _CartPageState extends State<CartPage> {
                 '${_total.toStringAsFixed(2)}',
                 style: GoogleFonts.inter(
                   fontSize: 18,
-                  fontWeight: FontWeight.w800,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ],
@@ -123,7 +123,7 @@ class _CartPageState extends State<CartPage> {
           SizedBox(height: 12),
           SizedBox(
             width: double.infinity,
-            height: 52,
+            height: 60,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color.fromRGBO(150, 114, 89, 1),
@@ -132,9 +132,7 @@ class _CartPageState extends State<CartPage> {
               onPressed: cart.isEmpty ? null : () {},
               child: Text(
                 'Checkout',
-                style: GoogleFonts.inter(
-                  color: Colors.white,
-                ),
+                style: GoogleFonts.inter(color: Colors.white),
               ),
             ),
           ),

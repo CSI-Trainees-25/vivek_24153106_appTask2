@@ -12,6 +12,7 @@ class ItemTile extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
+        height: 100,
         margin: EdgeInsets.only(left: 20),
         padding: EdgeInsets.all(3),
         decoration: BoxDecoration(color: Colors.white),
@@ -19,9 +20,13 @@ class ItemTile extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(menuItem.imagePath, width: 160),
-            Text(menuItem.name, style: GoogleFonts.dmSerifDisplay(fontSize: 20)),
+            Text(
+              menuItem.name,
+              style: GoogleFonts.dmSerifDisplay(fontSize: 20),
+            ),
             SizedBox(
               width: 160,
+
               child: Row(
                 children: [
                   Text(menuItem.price),

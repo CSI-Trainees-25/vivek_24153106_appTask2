@@ -84,16 +84,20 @@ class _HomePageState extends State<HomePage> {
           SizedBox(height: 20),
           Padding(
             padding: EdgeInsetsGeometry.symmetric(horizontal: 20),
-            child: Row(
-              children: [
-                _createCategoryCard('Espresso', true),
-                SizedBox(width: 8),
-                _createCategoryCard('Latte', false),
-                SizedBox(width: 8),
-                _createCategoryCard('Cappuccino', false),
-                SizedBox(width: 8),
-                _createCategoryCard('CafeMocha', false),
-              ],
+            child: SizedBox(
+              height: 40,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  _createCategoryCard('Espresso', true),
+                  SizedBox(width: 8),
+                  _createCategoryCard('Latte', false),
+                  SizedBox(width: 8),
+                  _createCategoryCard('Cappuccino', false),
+                  SizedBox(width: 8),
+                  _createCategoryCard('CafeMocha', false),
+                ],
+              ),
             ),
           ),
           SizedBox(height: 10),
