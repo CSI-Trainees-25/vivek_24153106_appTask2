@@ -16,6 +16,7 @@ class _CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: BackButton(),
         title: Text(
           'Cart',
           style: GoogleFonts.inter(fontWeight: FontWeight.w700),
